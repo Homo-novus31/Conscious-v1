@@ -63,3 +63,14 @@ Keep it concise and analytical.Write plain text with all these specifications
 
   # Combine system, context, and instruction. The schema is now part of the instruction.
   return f"System\n{system}\n{context}\n{instruction}"
+
+
+def run_decision(items,mode):
+  prompt = build_prompt(items,mode)
+  output = generate_decision(prompt)
+  if mode=="train":
+    return output
+  elif mode =="infer":
+    return output
+
+
